@@ -1,0 +1,22 @@
+mixin last-news()
+  section.last-news
+    .container
+      h2.last-news__title Последние новости
+      ul.last-news__list
+        -
+            const articles = [
+              {
+                image: "news-1",
+                alt: "Фото хлеба с крупными порами",
+                title: "Секреты идеального мякиша",
+                text: "Как добиться крупных пор и хрустящей корочки в домашнем хлебе. Техники формовки и выпечки для профессионального результата.",
+                link: "#"
+              }
+            ]
+        each article in articles
+        li.last-news__item
+          +img("content", article.image, "webp", 360, 250, article.alt )
+          h3.last-news__item-title= article.title
+          p.last-news__item-text= article.text
+          a.last-news__item-link(href=article.link) Читать далее
+
