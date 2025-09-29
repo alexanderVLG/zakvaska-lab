@@ -7,16 +7,30 @@ mixin last-news()
             const articles = [
               {
                 image: "news-1",
-                alt: "Фото хлеба с крупными порами",
+                alt: "Фото хлеба с крупными порами.",
                 title: "Секреты идеального мякиша",
                 text: "Как добиться крупных пор и хрустящей корочки в домашнем хлебе. Техники формовки и выпечки для профессионального результата.",
+                link: "#"
+              },
+              {
+                image: "news-2",
+                alt: "Замес теста.",
+                title: "Мастерство замеса теста",
+                text: "Правильная техника замеса&nbsp;&mdash; основа вкусного хлеба. Узнайте как развить глютеновую сеть и&nbsp;почувствовать готовность теста.",
+                link: "#"
+              },
+              {
+                image: "news-3",
+                alt: "Подовый хлеб с красивыми надрезами.",
+                title: "Исскуство надрезов",
+                text: "Надрезы на&nbsp;хлебе&nbsp;&mdash; это не&nbsp;только красота, но&nbsp;и&nbsp;функциональность. Изучите различные техники и&nbsp;узоры для вашей выпечки.",
                 link: "#"
               }
             ]
         each article in articles
-        li.last-news__item
-          +img("content", article.image, "webp", 360, 250, article.alt )
-          h3.last-news__item-title= article.title
-          p.last-news__item-text= article.text
-          a.last-news__item-link(href=article.link) Читать далее
+          li.last-news__item
+            +img("content", article.image, "webp", 360, 250, article.alt )
+            h3.last-news__item-title= article.title
+            p.last-news__item-text= article.text
+            a.last-news__item-link(href=article.link) Читать далее
 
