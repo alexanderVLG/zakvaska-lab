@@ -31,6 +31,6 @@ mixin last-news()
           li.last-news__item
             +img("content", article.image, "webp", 360, 250, article.alt )
             h3.last-news__item-title= article.title
-            p.last-news__item-text= article.text
+            p.last-news__item-text!= article.text
             a.last-news__item-link(href=article.link) Читать далее
 

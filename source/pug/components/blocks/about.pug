@@ -1,7 +1,12 @@
 mixin about()
   section.about
     .container
-      ul.about-content
-        li.about__content-item
-        li.about__content-item
+      .about-content
+        .about-content__item
+          h2 О нашем блоге
+          p Мы&nbsp;&mdash; сообщество увлеченных пекарей, объединенных любовью к&nbsp;натуральному хлебу на&nbsp;закваске. Наша миссия&nbsp;&mdash; делиться знаниями, вдохновлять и&nbsp;помогать каждому освоить исскуство хлебопечения.
+          p Более 5&nbsp;лет мы&nbsp;собираем рецепты, техникии секреты от&nbsp;профессиональновсо всего мира, чтобы сделать процессприготовления хлеба понятным и&nbsp;доступным для всех.
+          +btn({text: "Узнать больше", href: "#"})
+        .about-content__item
+          +img("content", "about-us", "webp", 550, 400, "Замес теста.")
 
