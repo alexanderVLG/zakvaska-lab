@@ -1,3 +1,23 @@
-mixin footer(footerMods)
+mixin footer(footerMods, currentUrl)
+  -
+    const footerLinks = [
+      {
+        href: "index.html",
+        text: "Главная"
+      },
+      {
+        href: "#",
+        text: "Рецепты"
+      },
+      {
+        href: "#",
+        text: "Блог"
+      },
+      {
+        href: "#",
+        text: "Контакты"
+      }
+    ]
   footer.footer(class=footerMods)
     .container
+
