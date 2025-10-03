@@ -27,7 +27,7 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        img.header__logo(src="../../../img/content/logotype.png", alt="Логотип сайта" aria-label="Логотип")
+        img.header__logo(src="../../../img/content/logotype.webp", alt="Логотип сайта" aria-label="Логотип")
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
           img(src="../../../img/content/logotype.png", alt="Логотип сайта")

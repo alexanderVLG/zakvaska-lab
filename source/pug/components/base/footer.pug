@@ -20,4 +20,10 @@ mixin footer(footerMods, currentUrl)
     ]
   footer.footer(class=footerMods)
     .container
+      if(currentUrl === "index.html")
+        img.footer__logo(src="../../../img/content/logotype.webp" alt="Логотип" aria-label="Логотип")
+      else
+        a.footer__logo(href="index.html" aria-label="Переход на главную")
+          img(src="../../../img/content/logotype.webp" alt="Логотип." aria-label="Логотип")
+
 
