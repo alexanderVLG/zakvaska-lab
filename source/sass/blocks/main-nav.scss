@@ -1,11 +1,20 @@
 .main-nav {
   margin-left: auto;
 
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    height: 100%;
+  }
+
   &__list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    gap: 40px;
+    row-gap: 20px;
+    column-gap: 40px;
     list-style: none;
   }
 
