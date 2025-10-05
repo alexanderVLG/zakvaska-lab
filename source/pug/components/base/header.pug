@@ -24,7 +24,7 @@ mixin header(headerMods, currentUrl)
     ]
 
   header.header(class=headerMods)
-    .container
+    .container.main-nav__wrapper
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
         picture
@@ -35,15 +35,14 @@ mixin header(headerMods, currentUrl)
           picture
             source(media="(max-width: 767px)" srcset="../../../img/content/logotype.webp" width="50" height="50" type="image/svg+xml")
             img(src="../../../img/content/logotype.png" width="100" height="100" alt="Логотип сайта")
-      nav.main-nav(data-validate="burger-menu" aria-hidden="true")
-        button.main-nav__toggle.btn-reset(type="button", data-validate="burger-toggle" aria-label="Переключатель отображения меню", aria-pressed="false")
+      button.main-nav__toggle.btn-reset(type="button", data-validate="burger-toggle" aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 18, 16)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
+      nav.main-nav(data-validate="burger-menu" aria-hidden="true")
+        ul.main-nav__list
+          each link in headerLinks
+            - const activeState = currentUrl === link.href
+            li.main-nav__item
+              if(activeState)
+                span.main-nav__link.is-active= link.text
+              else
+                a.main-nav__link(href=link.href)= link.text

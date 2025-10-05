@@ -1,51 +1,104 @@
+$vp-768: 768px;
+$color-default-black: #000000;
+$color-transparent: transparent;
+
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+.header {
+  padding: 20px 0;
+  background: #ffffff;
+
+  &.dark {
+    background: #333333;
+    color: #ffffff;
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  justify-content: space-between; /* Логотип слева, кнопка справа */
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+}
+
 .main-nav {
   display: flex;
-  margin-left: auto;
 
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    margin-left: 40px;
+  @include vp-767 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background: #ffffff;
+    padding: 60px 20px;
+    display: none; /* Полностью скрываем в мобильной версии */
   }
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    row-gap: 20px;
-    column-gap: 40px;
-    list-style: none;
-  }
-
-  &__link {
-    color: $color-default-black;
-
-    &.is-active {
-      opacity: 0.6;
-    }
-  }
-
-  &__toggle {
-    align-items: center;
-    border: none;
-    background-color: $color-transparent;
-  }
-
-  @media (min-width: $vp-768) {
-    &__toggle {
-      display: none;
-    }
-  }
-
-  @media (max-width: $vp-768) {
-    &__wrapper {
-      display: none;
+  &[data-active="true"] {
+    @include vp-767 {
+      display: block; /* Показываем при активации */
     }
   }
 }
 
-.main-nav[data-validate="burger-menu"][data-active="true"] {
-  display: block;
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  row-gap: 20px;
+  column-gap: 40px;
+  list-style: none;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 20px;
+    display: none; /* Скрываем список по умолчанию */
+  }
+
+  .main-nav[data-active="true"] & {
+    @include vp-767 {
+      display: flex; /* Показываем при активации */
+    }
+  }
+}
+
+.main-nav__link {
+  color: $color-default-black;
+  text-decoration: none;
+
+  &.is-active {
+    opacity: 0.6;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+  margin-left: auto; /* Прижимаем к правому краю */
+  align-items: center;
+  border: none;
+  background-color: $color-transparent;
+  padding: 10px;
+  cursor: pointer;
+
+  @include vp-767 {
+    display: flex;
+  }
+}
+
+.burger-button__icon {
+  width: 18px;
+  height: 16px;
 }
