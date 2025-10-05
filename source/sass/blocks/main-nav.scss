@@ -1,4 +1,5 @@
 .main-nav {
+  display: flex;
   margin-left: auto;
 
   &__wrapper {
@@ -27,6 +28,20 @@
   }
 
   &__toggle {
-    display: none;
+    align-items: center;
+    border: none;
+    background-color: $color-transparent;
+  }
+
+  @media (min-width: $vp-768) {
+    &__toggle {
+      display: none;
+    }
+  }
+
+  @media (max-width: $vp-768) {
+    &__wrapper {
+      display: none;
+    }
   }
 }

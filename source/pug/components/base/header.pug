@@ -27,12 +27,16 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        img.header__logo(src="../../../img/content/logotype.webp", alt="Логотип сайта" aria-label="Логотип")
+        picture
+          source(media="(max-width: 767px)" srcset="../../../img/content/logotype.webp" width="50" height="50" type="image/svg+xml")
+          img.header__logo(src="../../../img/content/logotype.webp" width="100" height="100" alt="Логотип сайта" aria-label="Логотип")
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную")
-          img(src="../../../img/content/logotype.png", alt="Логотип сайта")
+        a.header__logo(href="index.html" aria-label="Переход на главную")
+          picture
+            source(media="(max-width: 767px)" srcset="../../../img/content/logotype.webp" width="50" height="50" type="image/svg+xml")
+            img(src="../../../img/content/logotype.png" width="100" height="100" alt="Логотип сайта")
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        button.main-nav__toggle.btn-reset(type="button", data-validate="burger-toggle" aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 18, 16)
         .main-nav__wrapper
           ul.main-nav__list
