@@ -45,3 +45,7 @@
     }
   }
 }
+
+.main-nav[data-validate="burger-menu"][data-active="true"] {
+  display: block;
+}
