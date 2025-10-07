@@ -1,26 +1,6 @@
-$vp-768: 768px;
-$color-default-black: #000000;
-$color-transparent: transparent;
-
-@mixin vp-767 {
-  @media (max-width: ($vp-768 - 1px)) {
-    @content;
-  }
-}
-
-.header {
-  padding: 20px 0;
-  background: #ffffff;
-
-  &.dark {
-    background: #333333;
-    color: #ffffff;
-  }
-}
-
 .main-nav__wrapper {
   display: flex;
-  justify-content: space-between; /* Логотип слева, кнопка справа */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -39,12 +19,13 @@ $color-transparent: transparent;
     height: 100%;
     background: #ffffff;
     padding: 60px 20px;
-    display: none; /* Полностью скрываем в мобильной версии */
+    display: none;
+    z-index: 10;
   }
 
   &[data-active="true"] {
     @include vp-767 {
-      display: block; /* Показываем при активации */
+      display: block;
     }
   }
 }
@@ -61,12 +42,12 @@ $color-transparent: transparent;
   @include vp-767 {
     flex-direction: column;
     gap: 20px;
-    display: none; /* Скрываем список по умолчанию */
+    display: none;
   }
 
   .main-nav[data-active="true"] & {
     @include vp-767 {
-      display: flex; /* Показываем при активации */
+      display: flex;
     }
   }
 }
@@ -85,20 +66,17 @@ $color-transparent: transparent;
 }
 
 .main-nav__toggle {
+  position: relative;
   display: none;
-  margin-left: auto; /* Прижимаем к правому краю */
+  margin-left: auto;
   align-items: center;
   border: none;
   background-color: $color-transparent;
   padding: 10px;
   cursor: pointer;
+  z-index: 20;
 
   @include vp-767 {
     display: flex;
   }
-}
-
-.burger-button__icon {
-  width: 18px;
-  height: 16px;
 }
