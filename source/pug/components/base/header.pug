@@ -36,7 +36,8 @@ mixin header(headerMods, currentUrl)
             source(media="(max-width: 767px)" srcset="../../../img/content/logotype.webp" width="50" height="50" type="image/svg+xml")
             img(src="../../../img/content/logotype.png" width="100" height="100" alt="Логотип сайта")
       button.main-nav__toggle.btn-reset(type="button", data-validate="burger-toggle" aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 18, 16)
+          +icon("icon-burger", 18, 16)(class="burger-button__icon" data-validate="burger-icon")
+          +icon("icon-close", 24, 24)(class="burger-button__icon" data-validate="close-icon" style="display: none;")
       nav.main-nav(data-validate="burger-menu" aria-hidden="true")
         ul.main-nav__list
           each link in headerLinks
