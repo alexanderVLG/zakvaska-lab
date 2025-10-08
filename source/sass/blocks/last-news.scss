@@ -5,11 +5,22 @@
 .last-news__title {
   font-size: 36px;
   text-align: center;
+  margin-bottom: 70px;
 }
 
 .last-news__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
   padding-left: 0;
   list-style-type: none;
+}
+
+.last-news__item-title {
+  font-size: 24px;
+}
+
+.last-news__item-link {
+  color: $color-accent-main;
+  font-weight: 700;
 }
