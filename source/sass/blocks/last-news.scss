@@ -1,0 +1,15 @@
+.last-news {
+  padding: 135px 0 175px;
+}
+
+.last-news__title {
+  font-size: 36px;
+  text-align: center;
+}
+
+.last-news__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-left: 0;
+  list-style-type: none;
+}
