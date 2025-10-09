@@ -1,0 +1,19 @@
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding-left: 0;
+  list-style-type: none;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 40px;
+    line-height: 26px;
+  }
+}
