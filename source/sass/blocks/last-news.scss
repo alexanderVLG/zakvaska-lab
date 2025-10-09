@@ -23,4 +23,9 @@
 .last-news__item-link {
   color: $color-accent-main;
   font-weight: 700;
+  transition: opacity $trans-600;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
