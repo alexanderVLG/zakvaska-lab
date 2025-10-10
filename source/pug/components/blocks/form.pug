@@ -1,9 +1,9 @@
 mixin form()
-  section.form
-    .container
+  section.form-block
+    .container.form-block__container
       form(action="#")
-        h2.form__title Подпишитесь на&nbsp;нашу рассылку
-        p.form__subtitle Получайте свежие рецепты, советы и&nbsp;секреты хлебопечения прямо на&nbsp;вашу почту
+        h2 Подпишитесь на&nbsp;нашу рассылку
+        p Получайте свежие рецепты, советы и&nbsp;секреты хлебопечения прямо на&nbsp;вашу почту
         .form__input-wrapper
           input(type="email", name="user-mail", placeholder="Ваш email")
           +btn({text: "Подписаться", type: "button"})

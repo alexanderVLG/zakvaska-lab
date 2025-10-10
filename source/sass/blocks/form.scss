@@ -1,0 +1,42 @@
+.form-block {
+  padding-top: 70px;
+  padding-bottom: 55px;
+  background-color: $color-accent-main;
+
+  .form-block__container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    max-width: 580px;
+    box-sizing: border-box;
+  }
+
+  h2,
+  p {
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    color: $color-default-white;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .form__input-wrapper {
+    display: flex;
+    width: 100%;
+
+    input {
+      flex-grow: 1;
+    }
+
+    button {
+      flex-grow: 1;
+    }
+  }
+}
