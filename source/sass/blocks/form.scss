@@ -33,10 +33,14 @@
 
     input {
       flex-grow: 1;
+      padding: 20px 15px;
+      border: none;
     }
 
     button {
-      flex-grow: 1;
+      flex-grow: 0;
+      padding: 20px 30px;
+      background-color: $color-default-black;
     }
   }
 }
