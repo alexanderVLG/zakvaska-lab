@@ -1,9 +1,15 @@
 .footer {
   padding: 40px 0;
+  background-color: $color-shades-of-linen;
 
-  background-color: $color-fair-pink;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-vista-white;
+  }
 
   ul {
+    display: flex;
     padding-left: 0;
     list-style-type: none;
   }
