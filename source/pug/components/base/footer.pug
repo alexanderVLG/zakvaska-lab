@@ -21,19 +21,17 @@ mixin footer(footerMods, currentUrl)
     const socialList = [
       {
         href: "https://dzen.ru",
-        image: "#",
-        width: 24,
-        height: 24,
+        image: "../../../img/svg/zen-logo.svg",
+        width: 36,
+        height: 36,
         alt: "Cсылка на дзен",
-        sizes: "24px"
       },
       {
         href: "https://vk.com",
-        image: "#",
-        width: 24,
-        height: 24,
+        image: "../../../img/content/vk.webp",
+        width: 40,
+        height: 40,
         alt: "Ссылка на ВК",
-        sizes: "24px"
       }
     ]
   footer.footer(class=footerMods)
@@ -56,6 +54,6 @@ mixin footer(footerMods, currentUrl)
         ul.footer-social__list
           each social in socialList
             li.footer-social__item
-              a.footer-social__link(href=social.hfer)
-                img(src=social.image, alt=social.alt)
+              a.footer-social__link(href=social.href target="_blank")
+                img(src=social.image, width=social.width height=social.height alt=social.alt)
 
