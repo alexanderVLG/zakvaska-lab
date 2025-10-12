@@ -1,5 +1,5 @@
 .footer {
-  padding: 40px 0;
+  padding: 40px 0 0;
   background-color: $color-shades-of-linen;
 
   .container {
@@ -7,7 +7,6 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 30px;
-    border-bottom: 1px solid $color-vista-white;
   }
 
   ul {
@@ -16,5 +15,15 @@
     gap: 25px;
     padding-left: 0;
     list-style-type: none;
+  }
+
+  .copyright {
+    padding-top: 20px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: $color-default-black;
+    opacity: 0.6;
+    border-top: 1px solid $color-vista-white;
   }
 }
