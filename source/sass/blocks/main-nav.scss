@@ -41,6 +41,8 @@
     flex-direction: column;
     gap: 20px;
     display: none;
+    font-size: size(60px);
+    line-height: size(60px);
   }
 
   .main-nav[data-active="true"] & {

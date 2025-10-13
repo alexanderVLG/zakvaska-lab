@@ -1,5 +1,12 @@
 .last-news {
   padding: size(135px) 0 size(175px);
+
+  @include vp-767 {
+    p {
+      font-size: size(28px);
+      line-height: size(36px);
+    }
+  }
 }
 
 .last-news__title {
@@ -7,6 +14,10 @@
   margin-bottom: size(70px);
   font-size: size(32px);
   text-align: center;
+
+  @include vp-767 {
+    font-size: size(48px);
+  }
 }
 
 .last-news__list {
@@ -28,6 +39,10 @@
 
 .last-news__item-title {
   font-size: size(28px);
+
+  @include vp-767 {
+    font-size: size(48px);
+  }
 }
 
 .last-news__item-link {
@@ -37,5 +52,10 @@
 
   &:hover {
     opacity: 0.6;
+  }
+
+  @include vp-767 {
+    font-size: size(28px);
+    line-height: size(36px);
   }
 }
