@@ -1,5 +1,9 @@
 .intro-container {
   position: relative;
+
+  img {
+    min-height: 150px;
+  }
 }
 
 .intro__content {
@@ -8,11 +12,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: size(40px);
+  min-width: 200px;
   background-color: $color-transparent-70;
 
   h1 {
     margin-top: 0;
-    line-height: size(50px);
+    line-height: size(70px);
   }
 
   p {
