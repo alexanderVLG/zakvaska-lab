@@ -1,8 +1,8 @@
-mixin last-news()
-  section.last-news
+mixin articles(articlesTitle)
+  section.articles
     .container
-      h2.last-news__title Последние новости
-      ul.last-news__list
+      h2.articles__title #{articlesTitle}
+      ul.articles__list
         -
             const articles = [
               {
@@ -25,12 +25,26 @@ mixin last-news()
                 title: "Исскуство надрезов",
                 text: "Надрезы на&nbsp;хлебе&nbsp;&mdash; это не&nbsp;только красота, но&nbsp;и&nbsp;функциональность. Изучите различные техники и&nbsp;узоры для вашей выпечки.",
                 link: "#"
+              },
+              {
+                image: "news-3",
+                alt: "Подовый хлеб с красивыми надрезами.",
+                title: "Исскуство надрезов",
+                text: "Надрезы на&nbsp;хлебе&nbsp;&mdash; это не&nbsp;только красота, но&nbsp;и&nbsp;функциональность. Изучите различные техники и&nbsp;узоры для вашей выпечки.",
+                link: "#"
+              },
+              {
+                image: "news-3",
+                alt: "Подовый хлеб с красивыми надрезами.",
+                title: "Исскуство надрезов",
+                text: "Надрезы на&nbsp;хлебе&nbsp;&mdash; это не&nbsp;только красота, но&nbsp;и&nbsp;функциональность. Изучите различные техники и&nbsp;узоры для вашей выпечки.",
+                link: "#"
               }
             ]
         each article in articles
-          li.last-news__item
+          li.articles__item
             +img("content", article.image, "webp", 360, 250, article.alt )
-            h3.last-news__item-title= article.title
-            p.last-news__item-text!= article.text
-            a.last-news__item-link(href=article.link) Читать далее
+            h3.articles__item-title= article.title
+            p.articles__item-text!= article.text
+            a.articles__item-link(href=article.link) Читать далее
 

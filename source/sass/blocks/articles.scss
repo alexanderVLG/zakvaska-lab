@@ -1,4 +1,4 @@
-.last-news {
+.articles {
   padding: size(135px) 0 size(175px);
 
   @include vp-767 {
@@ -9,7 +9,7 @@
   }
 }
 
-.last-news__title {
+.articles__title {
   margin-top: 0;
   margin-bottom: size(70px);
   font-size: size(32px);
@@ -20,7 +20,7 @@
   }
 }
 
-.last-news__list {
+.articles__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
@@ -37,15 +37,16 @@
   }
 }
 
-.last-news__item-title {
+.articles__item-title {
   font-size: size(28px);
 
   @include vp-767 {
     font-size: size(48px);
+    line-height: size(52px);
   }
 }
 
-.last-news__item-link {
+.articles__item-link {
   color: $color-accent-main;
   font-weight: 700;
   transition: opacity $trans-600;
