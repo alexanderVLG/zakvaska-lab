@@ -4,16 +4,17 @@ block variables
   - const title = "Блог про хлеб на закваске" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
-  - const headerMods = ""
+  - const headerMods = "header--padding-bottom"
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "blog.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
   - const articlesTitle = "Блог"
+  - const articlesMods = "articles--padding"
 
 block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +articles(articlesTitle)
+    +articles(articlesTitle, articlesMods)
 
 block modals

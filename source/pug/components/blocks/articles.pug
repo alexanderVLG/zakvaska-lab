@@ -1,5 +1,5 @@
-mixin articles(articlesTitle)
-  section.articles
+mixin articles(articlesTitle, articlesMods)
+  section.articles(class=articlesMods)
     .container
       h2.articles__title #{articlesTitle}
       ul.articles__list
