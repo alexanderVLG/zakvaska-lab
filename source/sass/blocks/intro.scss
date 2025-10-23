@@ -1,5 +1,9 @@
 .intro-container {
   position: relative;
+
+  img {
+    min-height: 150px;
+  }
 }
 
 .intro__content {

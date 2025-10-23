@@ -19,14 +19,10 @@ mixin header(headerMods, currentUrl)
     .container.main-nav__wrapper
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        picture
-          source(media="(max-width: 767px)" srcset="../../../img/content/logotype.webp" width="50" height="50" type="image/svg+xml")
-          img.header__logo(src="../../../img/content/logotype.webp" width="100" height="100" alt="Логотип сайта" aria-label="Логотип")
+        img.header__logo(src="img/content/logotype.webp" width="100" height="100" alt="Логотип сайта" aria-label="Логотип")
       else
         a.header__logo(href="index.html" aria-label="Переход на главную")
-          picture
-            source(media="(max-width: 767px)" srcset="../../../img/content/logotype.webp" width="50" height="50" type="image/svg+xml")
-            img(src="../../../img/content/logotype.png" width="100" height="100" alt="Логотип сайта")
+          img(src="img/content/logotype.png" width="100" height="100" alt="Логотип сайта")
       button.main-nav__toggle.btn-reset(type="button", data-validate="burger-toggle" aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 18, 16)(class="burger-button__icon" data-validate="burger-icon")
           +icon("icon-close", 24, 24)(class="burger-button__icon" data-validate="close-icon" style="display: none;")
