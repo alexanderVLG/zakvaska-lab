@@ -1,9 +1,5 @@
 .intro-container {
   position: relative;
-
-  img {
-    min-height: 150px;
-  }
 }
 
 .intro__content {
@@ -11,25 +7,31 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: size(40px);
+  padding: 40px;
   background-color: $color-transparent-70;
+
+  @include vp-424 {
+    padding: 10px;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
 
   h1 {
     margin-top: 0;
-    line-height: size(36px);
+    line-height: 36px;
 
-    @include vp-767 {
-      font-size: size(48px);
-      line-height: size(48px);
+    @include vp-424 {
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 
   p {
     margin: 0;
 
-    @include vp-767 {
-      font-size: size(28px);
-      line-height: size(36px);
+    @include vp-424 {
+      font-size: 14px;
     }
   }
 }
