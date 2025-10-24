@@ -1,6 +1,5 @@
 .main-nav__wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -68,7 +67,6 @@
   position: relative;
   display: none;
   margin-left: auto;
-  align-items: center;
   border: none;
   background-color: $color-transparent;
   padding: 10px;
