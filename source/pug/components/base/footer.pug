@@ -10,25 +10,21 @@ mixin footer(footerMods, currentUrl)
         text: "Рецепты"
       },
       {
-        href: "#",
+        href: "blog.html",
         text: "Блог"
-      },
-      {
-        href: "#",
-        text: "Контакты"
       }
     ]
     const socialList = [
       {
         href: "https://dzen.ru",
-        image: "../../../img/svg/zen-logo.svg",
+        image: "img/svg/zen-logo.svg",
         width: 36,
         height: 36,
         alt: "Cсылка на дзен",
       },
       {
         href: "https://vk.com",
-        image: "../../../img/content/vk.webp",
+        image: "img/content/vk.webp",
         width: 40,
         height: 40,
         alt: "Ссылка на ВК",
@@ -37,10 +33,10 @@ mixin footer(footerMods, currentUrl)
   footer.footer(class=footerMods)
     .container
       if(currentUrl === "index.html")
-        img.footer__logo(src="../../../img/content/logotype.webp" alt="Логотип" aria-label="Логотип")
+        img.footer__logo(src="img/content/logotype.webp" alt="Логотип" aria-label="Логотип")
       else
         a.footer__logo(href="index.html" aria-label="Переход на главную")
-          img(src="../../../img/content/logotype.webp" alt="Логотип." aria-label="Логотип")
+          img(src="img/content/logotype.webp" alt="Логотип." aria-label="Логотип")
       .footer-nav
         ul.footer-nav__list
           each link in footerLinks
@@ -49,7 +45,7 @@ mixin footer(footerMods, currentUrl)
                 if(activeState)
                   span.footer-nav__link.is-active= link.text
                 else
-                  a.footer-nav__link(href="link.href")= link.text
+                  a.footer-nav__link(href=link.href)= link.text
       .footer-social
         ul.footer-social__list
           each social in socialList
