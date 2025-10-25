@@ -1,0 +1,19 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Рецепты" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = "header--padding-bottom"
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "recipes.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const articlesTitle = "Рецепты"
+
+block main
+  main
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +articles(articlesTitle)
+
+block modals
