@@ -9,12 +9,11 @@ block variables
   - const footerMods = ""
   - const currentUrl = "blog.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
   - const articlesTitle = "Блог"
-  - const articlesMods = "articles--padding"
 
 block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +articles(articlesTitle, articlesMods)
+    +articles(articlesTitle)
 
 block modals
