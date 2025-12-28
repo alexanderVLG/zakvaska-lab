@@ -4,6 +4,8 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {burgerToggle} from './utils/burger.js';
+import {initAccordions} from './modules/accordion/init-accordion.js';
+
 
 // ---------------------------------
 
@@ -55,3 +57,10 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
+    initAccordions();
+  });
+});
