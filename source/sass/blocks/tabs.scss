@@ -15,7 +15,7 @@
     column-gap: 10px;
     flex: 1;
     position: relative;
-    padding: 20px 0;
+    padding: 0 0 20px;
     overflow: hidden;
     border-bottom: 1px solid #ebebeb;
   }
@@ -29,8 +29,7 @@
 }
 
 .tab-btn {
-  background: none;
-  border: none;
+  margin-right: 40px;
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
@@ -38,15 +37,15 @@
   transition: all 0.3s ease;
   white-space: nowrap;
   position: relative;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin-right: 40px;
+  background-color: #c17754;
+  border: none;
 }
 
 @include vp-767 {
   .tab-btn {
     font-size: 14px;
-    margin-right: 0;
+    margin-right: 20px;
   }
 
   .tabs__nav-wrapper {
@@ -72,8 +71,13 @@
 
 .tabs__content {
   position: relative;
-  padding: 40px 0;
+  padding: 40px 0 0;
+
+  p {
+    margin: 0;
+  }
 }
+
 
 /* неактивные */
 .tab__content {
