@@ -21,6 +21,77 @@
   }
 }
 
+@include vp-767 {
+  .tabs__nav-wrapper {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: #a5a5a6;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+@include vp-767 {
+  .tab-btn {
+    font-size: 14px;
+    margin-right: 0;
+  }
+
+  .tabs__nav-wrapper {
+    gap: 10px;
+  }
+}
+
+.tab-btn:hover {
+  color: #ff8c1e;
+  opacity: 1;
+}
+
+.tab-btn.active {
+  color: #ff8c1e;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.tab-input {
+  position: absolute;
+  left: -9999px;
+}
+
+.tabs__content {
+  position: relative;
+  padding: 40px 0;
+}
+
+/* неактивные */
+.tab__content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.tab__content.active {
+  display: block;
+}
+
 #id-tab-1:checked ~ .tabs__nav .tab-btn[for="id-tab-1"] {
   color: #ff8c1e;
   font-weight: 600;
@@ -28,21 +99,6 @@
 }
 
 #id-tab-1:checked ~ .tabs__content .tab__content[data-tab="1"] {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  position: relative;
-  pointer-events: auto;
-  transition-delay: 0s;
-}
-
-#id-tab-2:checked ~ .tabs__nav .tab-btn[for="id-tab-2"] {
-  color: #ff8c1e;
-  font-weight: 600;
-  opacity: 1;
-}
-
-#id-tab-2:checked ~ .tabs__content .tab__content[data-tab="2"] {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
